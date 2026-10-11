@@ -4,6 +4,7 @@ matplotlib.use("agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from .colours import default_colours
+from scipy.interpolate import make_interp_spline
 
 pygame.init()
 
@@ -47,6 +48,19 @@ class Plotter:
             # dots
             elif plot_type == "scatter":
                 ax.scatter(x_values, y_values, color=color, label=label)
+            # smoothline
+            elif plot_type == "smoothline":
+                print(x_values)
+                print(y_values)
+                print(i)
+                print(nested_input_array[i])
+                spline = make_interp_spline(x_values, y_values, k=3)
+                x_smooth = np.linspace(x_values.min(), x_values.max(), 300) 
+                y_smooth = spline(x_smooth)
+                ax.plot(x_smooth, y_smooth, color=color, label=label)
+            # trendline
+            elif plot_type == "trendline":
+                pass
 
         # configuring graph
         if not self.display_axes:
