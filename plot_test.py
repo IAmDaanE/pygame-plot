@@ -2,7 +2,7 @@ import pgplot.plotter as plt
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((1000, 800))
+screen = pygame.display.set_mode((800, 300))
 
 plot_types_list = [
     "scatter",
@@ -24,7 +24,7 @@ plot_colours_dict = {
     2: "#00FFFF"
 }
 
-plot_surface = pygame.Surface((800, 600))
+plot_surface = pygame.Surface((800, 300))
 plotter = plt.Plotter(
     plot_types_list, 
     plot_labels_list=plot_labels_list, 
@@ -59,5 +59,5 @@ while running:
             running = False
 
     screen.fill((0, 0, 0))
-    screen.blit(plot_surface, (50, 50))
+    screen.blit(plot_surface, (0, 0))
     pygame.display.update()
