@@ -54,7 +54,7 @@ class Plotter:
                 print(y_values)
                 print(i)
                 print(nested_input_array[i])
-                spline = make_interp_spline(x_values, y_values, k=3)
+                spline = make_interp_spline(x_values, y_values, k=2)
                 x_smooth = np.linspace(x_values.min(), x_values.max(), 300) 
                 y_smooth = spline(x_smooth)
                 ax.plot(x_smooth, y_smooth, color=color, label=label)
