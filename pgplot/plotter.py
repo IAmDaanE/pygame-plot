@@ -58,9 +58,6 @@ class Plotter:
                 x_smooth = np.linspace(x_values.min(), x_values.max(), 300) 
                 y_smooth = spline(x_smooth)
                 ax.plot(x_smooth, y_smooth, color=color, label=label)
-            # trendline
-            elif plot_type == "trendline":
-                pass
 
         # configuring graph
         if not self.display_axes:
@@ -68,13 +65,13 @@ class Plotter:
         if self.display_legend:
             ax.legend(loc='best', frameon=True, facecolor='white', edgecolor='gray')
         if self.custom_colours:
-            kleur_kader_en_tekst = self.plot_colours_dict["axes"]
-            kleur_grafiek_vlak = self.plot_colours_dict["background"]
-            fig.patch.set_facecolor(kleur_grafiek_vlak)
-            ax.set_facecolor(kleur_grafiek_vlak)
+            frame_color = self.plot_colours_dict["axes"]
+            background_color = self.plot_colours_dict["background"]
+            fig.patch.set_facecolor(background_color)
+            ax.set_facecolor(background_color)
             for spine in ax.spines.values():
-                spine.set_color(kleur_kader_en_tekst)
-            ax.tick_params(colors=kleur_kader_en_tekst, which='both')
+                spine.set_color(frame_color)
+            ax.tick_params(colors=frame_color, which='both')
 
         # blit to pygame
         fig.tight_layout(pad=0)
