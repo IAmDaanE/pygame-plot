@@ -6,19 +6,22 @@ screen = pygame.display.set_mode((1000, 800))
 
 plot_types_list = [
     "scatter",
-    "line"
+    "line",
+    "smoothline"
 ]
 
 plot_labels_list = [
     "plot1",
-    "plot2"
+    "plot2",
+    "plot3"
 ]
 
 plot_colours_dict = {
     "background": "#000000",
     "axes": "#E1E0E0",
     0: "#416EB3",
-    1: "#FFDA21"
+    1: "#FFDA21",
+    2: "#00FFFF"
 }
 
 plot_surface = pygame.Surface((800, 600))
@@ -36,6 +39,10 @@ plotter.plot(
         [
             [0, 1, 3, 6, 8, 9, 12], 
             [5, 2, 6, 8, -4, 2, 4]
+        ],
+        [
+            [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14],
+            [5, 9, 2, 4, 5, 3, 7, 5, 9, 8, 9, 5, 4]
         ],
         [
             [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14],
