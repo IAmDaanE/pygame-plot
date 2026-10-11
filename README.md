@@ -2,6 +2,10 @@
 
 A simple library to easily plot line graphs and scatter plots in a pygame window using matplotlib.
 
+<img width="1203" height="906" alt="Schermafbeelding 2026-10-11 120510" src="https://github.com/user-attachments/assets/24c270d1-6264-46a8-ac06-0ce65036d29b" />
+
+*the resulting window of the plot test, a scatter plot and smooth line plot*
+
 ---
 
 ## About the Project
