@@ -3,8 +3,8 @@
 A simple library to easily plot line graphs and scatter plots in a pygame window using matplotlib.
 
 Projects I use this in:
-- [loss graph in barebones_ml machine learning library]("https://github.com/IAmDaanE/bare-bones-ml")
-- [function visualization in ai function approximation training]("https://github.com/IAmDaanE/ai-function-approximation")
+- [loss graph in barebones_ml machine learning library](https://github.com/IAmDaanE/bare-bones-ml)
+- [function visualization in ai function approximation training](https://github.com/IAmDaanE/ai-function-approximation)
 
 <img width="1199" height="495" alt="Schermafbeelding 2026-10-11 210209" src="https://github.com/user-attachments/assets/beea4a99-ccb8-4725-b853-85cfad31cae9" />
 
