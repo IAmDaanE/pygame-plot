@@ -65,13 +65,15 @@ class Plotter:
         if self.display_legend:
             ax.legend(loc='best', frameon=True, facecolor='white', edgecolor='gray')
         if self.custom_colours:
-            frame_color = self.plot_colours_dict["axes"]
+            if self.display_axes:
+                frame_color = self.plot_colours_dict["axes"]
+                for spine in ax.spines.values():
+                    spine.set_color(frame_color)
+                ax.tick_params(colors=frame_color, which='both')
             background_color = self.plot_colours_dict["background"]
             fig.patch.set_facecolor(background_color)
             ax.set_facecolor(background_color)
-            for spine in ax.spines.values():
-                spine.set_color(frame_color)
-            ax.tick_params(colors=frame_color, which='both')
+            
 
         # blit to pygame
         fig.tight_layout(pad=0)
